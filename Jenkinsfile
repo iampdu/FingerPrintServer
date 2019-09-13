@@ -3,7 +3,7 @@ node ("windows") {
  
     git url: 'https://github.com/iampdu/FingerPrintServer.git'
  
-    withMaven(...) {
+    withMaven() {
  
       bat "mvn clean package"
  
