@@ -1,9 +1,12 @@
-node{
-    stage('SCM Checkout')
-    {
-        git 'https://github.com/iampdu/FingerPrintServer.git'
-    }
-    stage('Compile Package'){
-        sh 'mvn clean package'
-    }
+pipeline {
+    
+    stages {
+        stage('Build') {
+            steps {
+                sh 'mvn  clean package'
+            }
+        }
+        
+       
+    
 }
